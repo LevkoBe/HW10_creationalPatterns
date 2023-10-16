@@ -1,12 +1,10 @@
-let instance;
-
 class SingleObject {
   constructor() {
-    if (instance) {
-      return instance;
+    if (SingleObject.instance) {
+      return SingleObject.instance;
     }
-    instance = this;
-    return instance;
+    SingleObject.instance = this;
+    return SingleObject.instance;
   }
 }
 
