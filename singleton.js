@@ -1,3 +1,5 @@
+let instance;
+
 class SingleObject {
   constructor() {
     if (instance) {
