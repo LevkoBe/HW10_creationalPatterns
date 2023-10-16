@@ -11,8 +11,8 @@ class FactoryOfPeople {
       default:
         break;
     }
-    person.greet = () => {
-      console.log(this.person.greet() + ` And the day is ${this.person.day}`);
+    person.greetings = () => {
+      console.log(person.greet() + ` And the day is ${person.day}`);
     };
     return person;
   }
@@ -52,5 +52,5 @@ people.push(factory.createAPerson("pessimistic", "Lucy"));
 people.push(factory.createAPerson("optimistic", "Arnold"));
 
 for (var i = 0; i < people.length; i++) {
-  console.log(people[i].greet());
+  people[i].greetings();
 }
